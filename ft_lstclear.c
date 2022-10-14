@@ -6,7 +6,7 @@
 /*   By: abdeel-o < abdeel-o@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 22:00:37 by abdeel-o          #+#    #+#             */
-/*   Updated: 2022/10/12 16:11:37 by abdeel-o         ###   ########.fr       */
+/*   Updated: 2022/10/14 17:08:14 by abdeel-o         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,15 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*suivant;
 
+	suivant = *lst;
 	if (!lst || !del)
 		return ;
-	while (*lst)
+	while (*lst != NULL)
 	{
-		suivant = *lst;
+		suivant = suivant->next;
 		del((*lst)->content);
-		free(suivant);
-		*lst = (*lst)->next;
+		free(*lst);
+		*lst = suivant;
 	}
 	*lst = NULL;
 }
