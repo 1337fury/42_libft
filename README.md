@@ -1,4 +1,5 @@
 ## 42 LIBFT
+<img width="2059" alt="libft" src="https://user-images.githubusercontent.com/107589431/209883181-1b567669-813f-45ae-a2f5-e4252987f7eb.png">
 The `libft` project is a project in which you are required to recreate several functions from the C standard library. These functions are typically used for basic string manipulation, memory manipulation, and input/output.
 
 #### Here is a list of some of the functions that you might be asked to implement as part of the libft project:
