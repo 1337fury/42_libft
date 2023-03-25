@@ -83,9 +83,3 @@ char	**ft_split(char const *s, char c)
 	res = sub_split(res, s, c, words_count);
 	return (res);
 }
-
-// {=1=} count how many words in string
-// {=2=} alloc res pointer with full size + 1 -
-// for null poninter
-// {=3=} calc the len of words + 1 (null character),
-// and start alloc each word one by one
